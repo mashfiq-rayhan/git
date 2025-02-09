@@ -1,4 +1,4 @@
-**Git Cheat Sheet**
+**Git**
 
 > 1. Configuration
 ```sh
@@ -179,3 +179,19 @@ git branch --delete --remotes [remoteTrackingBranch]  # Delete remote tracking b
 git push origin --delete [remoteBranch]  # Delete a remote branch
 ```
 ---
+
+
+> 15. Sync Forked Repository
+```sh
+git remote -v  # Verify the remote URL of your fork
+
+git remote add upstream <original-repo-url>  # Add the original repository as upstream
+
+git fetch upstream  # Fetch updates from the original repository
+
+git checkout main  # Switch to the main branch
+
+git merge upstream/main  # Merge upstream changes into your local main branch
+
+git push origin main  # Push the synced changes to your forked repository
+```
