@@ -22,6 +22,8 @@ git add .  # Stage all changes for commit
 
 git commit -m "commit message"  # Commit staged changes with a message
 
+git revert <commit-id>  #  Revert a Commit
+
 git log  # Show commit history
 ```
 ---
@@ -194,4 +196,11 @@ git checkout main  # Switch to the main branch
 git merge upstream/main  # Merge upstream changes into your local main branch
 
 git push origin main  # Push the synced changes to your forked repository
+```
+---
+
+**GitHub Actions**
+> 16. 
+```sh
+
 ```
