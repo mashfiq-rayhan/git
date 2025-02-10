@@ -198,9 +198,3 @@ git merge upstream/main  # Merge upstream changes into your local main branch
 git push origin main  # Push the synced changes to your forked repository
 ```
 ---
-
-**GitHub Actions**
-> 16. 
-```sh
-
-```
