@@ -174,11 +174,13 @@ git branch -vv  # Show local-remote tracking branches
 
 git push origin master  # Push changes to the remote master branch
 
+git ls-remote  # List references in a remote repository
+
+git fetch origin  # Fetch updates from remote 'origin'
+
 git branch --track [localTrackingBranch] origin/[remoteTrackingBranch]  # Track a remote branch locally
 
 git clone <url>  # Clone a repository
-
-git ls-remote  # List references in a remote repository
 
 git branch --delete --remotes [remoteTrackingBranch]  # Delete remote tracking branch
 
