@@ -1,6 +1,10 @@
-**Git**
+<h2 style="display: flex; align-items: center; justify-content: center; gap: 10px;">
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git Logo" width="40">
+  <span style="color:#de4c36; font-size:1.5em;">GIT</span>
+</h2>
 
-> 1. Configuration
+
+> <h4 style="color:#942917; padding:5px">01. Configuration</h4>
 ```sh
 git config --global user.email "mashfiq.rayhan.ovi@gmail.com"  # Set global email
 
@@ -8,13 +12,13 @@ git config --global user.name "mashfiq-rayhan"  # Set global username
 ```
 ---
 
-> 2. Initialize Repository
+> <h4 style="color:#942917; padding:5px">02. Initialize Repository</h4>
 ```sh
 git init  # Initialize a new Git repository
 ```
 ---
 
-> 3. Basic Commands
+> <h4 style="color:#942917; padding:5px">03. Basic Commands</h4>
 ```sh
 git status  # Show the working tree status
 
@@ -28,7 +32,7 @@ git log  # Show commit history
 ```
 ---
 
-> 4. Branching & Switching
+> <h4 style="color:#942917; padding:5px">04. Branching & Switching</h4>
 ```sh
 git branch  # List all branches
 
@@ -44,7 +48,7 @@ git switch -c <branchname>  # Create and switch to a new branch
 ```
 ---
 
-> 5. Merging & Rebasing
+> <h4 style="color:#942917; padding:5px">05. Merging & Rebasing</h4>
 ```sh
 git merge <branchname>  # Merge specified branch into current branch
 
@@ -60,7 +64,7 @@ git merge --abort  # Abort an in-progress merge
 ```
 ---
 
-> 6. Undo Changes
+> <h4 style="color:#942917; padding:5px">06. Undo Changes</h4>
 ```sh
 git checkout <commit-id>  # Switch to a specific commit (detached HEAD)
 
@@ -70,9 +74,9 @@ git checkout .  # Restore all files from last commit
 
 git restore path/<filename>  # Restore specific file from last commit
 
-git reset  # Unstage all changes
-
 git restore --staged <filename>  # Unstage a specific file
+
+git reset  # Unstage all changes
 
 git reset --soft HEAD~1  # Undo last commit but keep changes staged
 
@@ -82,7 +86,7 @@ git reset --hard HEAD~1  # Undo last commit and remove changes from working dire
 ```
 ---
 
-> 7. Deleting Branches
+> <h4 style="color:#942917; padding:5px">07. Deleting Branches</h4>
 ```sh
 git branch -d <branchname>  # Delete merged branch
 
@@ -90,7 +94,7 @@ git branch -D <branchname>  # Force delete unmerged branch
 ```
 ---
 
-> 8. Stashing Changes
+> <h4 style="color:#942917; padding:5px">08. Stashing Changes</h4>
 ```sh
 git stash  # Save uncommitted changes
 
@@ -108,7 +112,7 @@ git stash clear  # Remove all stashes
 ```
 ---
 
-> 9. Cleaning Untracked Files
+> <h4 style="color:#942917; padding:5px">09. Cleaning Untracked Files</h4>
 ```sh
 git clean -dn  # Show a list of untracked files to be deleted
 
@@ -116,13 +120,13 @@ git clean -df  # Delete untracked files permanently
 ```
 ---
 
-> 10. Cherry-picking Commits
+> <h4 style="color:#942917; padding:5px">10. Cherry-picking Commits</h4>
 ```sh
 git cherry-pick <commit-id>  # Apply a specific commit from another branch
 ```
 ---
 
-> 11. Viewing Changes
+> <h4 style="color:#942917; padding:5px">11. Viewing Changes</h4>
 ```sh
 git diff  # Show unstaged changes
 
@@ -130,15 +134,15 @@ git log --merge  # Show commits affecting the merge
 ```
 ---
 
-> 12. Reflog & History
+> <h4 style="color:#942917; padding:5px">12. Reflog & History</h4>
 ```sh
 git reflog  # Show reference logs (past commit history for 30 days)
 ```
 ---
 
-> 13. Tags 
+> <h4 style="color:#942917; padding:5px">13. Tags</h4>
 
-> Lightweight Tags
+> <h5 style="color:#731f12; padding:5px">Lightweight Tags</h5>
 ```sh
 git tag <tag-id> <commit-id>  # Create a lightweight tag
 
@@ -146,7 +150,7 @@ git show <tag-id>  # Show details of a tag
 
 git tag -d <tag-id>  # Delete a tag
 ```
-> Annotated Tags
+> <h5 style="color:#731f12; padding:5px">Annotated Tags</h5>
 ```sh
 git tag -a <tag-id> -m "message"  # Create an annotated tag
 
@@ -154,7 +158,7 @@ git tag -d <tag-id>  # Delete an annotated tag
 ```
 ---
 
-> 14. Local to Remote
+> <h4 style="color:#942917; padding:5px">14. Local to Remote</h4>
 ```sh
 git remote  # List remote servers
 
@@ -182,8 +186,7 @@ git push origin --delete [remoteBranch]  # Delete a remote branch
 ```
 ---
 
-
-> 15. Sync Forked Repository
+> <h4 style="color:#942917; padding:5px">15. Sync Forked Repository</h4>
 ```sh
 git remote -v  # Verify the remote URL of your fork
 
