@@ -16,7 +16,8 @@ git config --global user.name "mashfiq-rayhan"
 
 > <h4 style="color:#942917; padding:5px">02. Initialize Repository</h4>
 ```sh
-git init              # Initializes a new Git repository in the current directory
+git init
+# Initializes a new Git repository in the current directory
 ```
 
 ---
@@ -43,90 +44,154 @@ git log
 
 > <h4 style="color:#942917; padding:5px">04. Branching & Switching</h4>
 ```sh
-git branch                       # Lists all branches in the repository
-git branch <branchname>          # Creates a new branch with the specified name
-git checkout <branchname>        # Switches to the specified existing branch
-git checkout -b <branchname>     # Creates and switches to a new branch
-git switch <branchname>          # Switches to the specified branch (modern alternative to checkout)
-git switch -c <branchname>       # Creates and switches to a new branch (modern alternative)
+
+git branch
+# Lists all branches in the repository
+
+git branch <branchname>
+# Creates a new branch with the specified name
+
+git checkout <branchname>
+# Switches to the specified existing branch
+
+git checkout -b <branchnam
+# Creates and switches to a new branch
+
+git switch <branchname>
+# Switches to the specified branch (modern alternative to checkout)
+
+git switch -c <branchname>
+# Creates and switches to a new branch (modern alternative)
 ```
 
 ---
 
 > <h4 style="color:#942917; padding:5px">05. Merging & Rebasing</h4>
 ```sh
-git merge <branchname>             # Merges the specified branch into the current branch
-git merge --squash <branchname>    # Combines changes from the specified branch into a single commit
-git commit -m "message"            # Commits merged changes with a descriptive message
-git merge --no-ff <branchname>     # Merges with a merge commit, preserving branch history
-git rebase <branchname>            # Reapplies current branch commits onto the specified branch
-git merge --abort                  # Cancels an in-progress merge operation
+git merge <branchname>
+# Merges the specified branch into the current branch
+
+git merge --squash <branchname>
+# Combines changes from the specified branch into a single commit
+
+git commit -m "message"
+# Commits merged changes with a descriptive message
+
+git merge --no-ff <branchname>
+# Merges with a merge commit, preserving branch history
+
+git rebase <branchname>
+# Reapplies current branch commits onto the specified branch
+
+git merge --abort
+# Cancels an in-progress merge operation
 ```
 
 ---
 
 > <h4 style="color:#942917; padding:5px">06. Undo Changes</h4>
 ```sh
-git checkout <commit-id>             # Switches to a specific commit, entering a detached HEAD state
-git checkout <filename>              # Restores the specified file from the last commit
-git checkout .                       # Restores all files from the last commit
-git restore path/<filename>          # Restores the specified file to its state in the last commit
-git restore --staged <filename>      # Removes the specified file from the staging area
-git reset                            # Unstages all changes, keeping them in the working directory
-git reset --soft HEAD~1              # Undoes the last commit but keeps changes staged
-git reset HEAD~1                     # Undoes the last commit and unstages changes
-git reset --hard HEAD~1      # Undoes the last commit and discards changes in the working directory
+git checkout <commit-id>
+# Switches to a specific commit, entering a detached HEAD state
+
+git checkout <filename>
+# Restores the specified file from the last commit
+
+git checkout .
+# Restores all files from the last commit
+
+git restore path/<filename>
+# Restores the specified file to its state in the last commit
+
+git restore --staged <filename>
+# Removes the specified file from the staging area
+
+git reset
+# Unstages all changes, keeping them in the working directory
+
+git reset --soft HEAD~1
+# Undoes the last commit but keeps changes staged
+
+git reset HEAD~1
+# Undoes the last commit and unstages changes
+
+git reset --hard HEAD~1
+# Undoes the last commit and discards changes in the working directory
 ```
 
 ---
 
 > <h4 style="color:#942917; padding:5px">07. Deleting Branches</h4>
 ```sh
-git branch -d <branchname>          # Deletes a fully merged branch
-git branch -D <branchname>          # Forcefully deletes a branch, even if unmerged
+git branch -d <branchname>
+# Deletes a fully merged branch
+
+git branch -D <branchname>
+# Forcefully deletes a branch, even if unmerged
 ```
 
 ---
 
 > <h4 style="color:#942917; padding:5px">08. Stashing Changes</h4>
 ```sh
-git stash                      # Saves uncommitted changes to a stack for later use
-git stash list                 # Lists all saved stashes
-git stash apply [index]        # Applies a specific stash (defaults to the latest if no index)
-git stash push -m "message"    # Saves changes to a stash with a descriptive message
-git stash pop [index]          # Applies and removes a specific stash from the stack
-git stash drop [index]         # Deletes a specific stash from the stack
-git stash clear                # Removes all stashes from the stack
+git stash
+# Saves uncommitted changes to a stack for later use
+
+git stash list
+# Lists all saved stashes
+
+git stash apply [index]
+# Applies a specific stash (defaults to the latest if no index)
+
+git stash push -m "message"
+# Saves changes to a stash with a descriptive message
+
+git stash pop [index]
+# Applies and removes a specific stash from the stack
+
+git stash drop [index]
+# Deletes a specific stash from the stack
+
+git stash clear
+# Removes all stashes from the stack
 ```
 
 ---
 
 > <h4 style="color:#942917; padding:5px">09. Cleaning Untracked Files</h4>
 ```sh
-git clean -dn    # Shows untracked files that would be deleted
-git clean -df    # Permanently deletes untracked files from the working directory
+git clean -dn
+# Shows untracked files that would be deleted
+
+git clean -df
+# Permanently deletes untracked files from the working directory
 ```
 
 ---
 
 > <h4 style="color:#942917; padding:5px">10. Cherry-picking Commits</h4>
 ```sh
-git cherry-pick <commit-id>    # Applies changes from a specific commit to the current branch
+git cherry-pick <commit-id>
+# Applies changes from a specific commit to the current branch
 ```
 
 ---
 
 > <h4 style="color:#942917; padding:5px">11. Viewing Changes</h4>
 ```sh
-git diff             # Shows differences between the working directory and staged changes
-git log --merge      # Displays commits involved in a merge conflict
+git diff
+# Shows differences between the working directory and staged changes
+
+git log --merge
+# Displays commits involved in a merge conflict
 ```
 
 ---
 
 > <h4 style="color:#942917; padding:5px">12. Reflog & History</h4>
 ```sh
-git reflog           # Shows a log of all reference updates (default retention: 30 days)
+git reflog
+# Shows a log of all reference updates (default retention: 30 days)
 ```
 
 ---
@@ -135,15 +200,23 @@ git reflog           # Shows a log of all reference updates (default retention: 
 
 > <h5 style="color:#731f12; padding:5px">Lightweight Tags</h5>
 ```sh
-git tag <tag-id> <commit-id>     # Creates a lightweight tag pointing to a specific commit
-git show <tag-id>                # Displays details of the specified tag
-git tag -d <tag-id>              # Deletes the specified lightweight tag
+git tag <tag-id> <commit-id>
+# Creates a lightweight tag pointing to a specific commit
+
+git show <tag-id>
+# Displays details of the specified tag
+
+git tag -d <tag-id>
+# Deletes the specified lightweight tag
 ```
 
 > <h5 style="color:#731f12; padding:5px">Annotated Tags</h5>
 ```sh
-git tag -a <tag-id> -m "message"     # Creates an annotated tag with a descriptive message
-git tag -d <tag-id>                  # Deletes the specified annotated tag
+git tag -a <tag-id> -m "message"
+# Creates an annotated tag with a descriptive message
+
+git tag -d <tag-id>
+# Deletes the specified annotated tag
 ```
 
 ---
