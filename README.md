@@ -20,11 +20,11 @@ git init              # Initializes a new Git repository in the current director
 
 > <h4 style="color:#942917; padding:5px">03. Basic Commands</h4>
 ```sh
-git status                        # Shows the current state of the working directory and staging area
-git add .                         # Stages all changes (modified and untracked files) for the next commit
-git commit -m "commit message"    # Records staged changes with a descriptive commit message
-git revert <commit-id>            # Creates a new commit to undo changes from the specified commit
-git log                           # Displays the commit history for the current branch
+git status                     # Shows the current state of the working directory and staging area
+git add .                      # Stages all changes (modified and untracked files) for the next commit
+git commit -m "commit message" # Records staged changes with a descriptive commit message
+git revert <commit-id>         # Creates a new commit to undo changes from the specified commit
+git log                        # Displays the commit history for the current branch
 ```
 
 ---
@@ -63,7 +63,7 @@ git restore --staged <filename>      # Removes the specified file from the stagi
 git reset                            # Unstages all changes, keeping them in the working directory
 git reset --soft HEAD~1              # Undoes the last commit but keeps changes staged
 git reset HEAD~1                     # Undoes the last commit and unstages changes
-git reset --hard HEAD~1              # Undoes the last commit and discards changes in the working directory
+git reset --hard HEAD~1          # Undoes the last commit and discards changes in the working directory
 ```
 
 ---
@@ -138,30 +138,33 @@ git tag -d <tag-id>                  # Deletes the specified annotated tag
 
 > <h4 style="color:#942917; padding:5px">14. Local to Remote</h4>
 ```sh
-git remote                                  # Lists all configured remote repositories
-git branch -a                               # Lists all local and remote branches
-git branch -r                               # Lists only remote tracking branches
-git remote show origin                      # Shows detailed information about the 'origin' remote
+git remote               # Lists all configured remote repositories
+git branch -a               # Lists all local and remote branches
+git branch -r               # Lists only remote tracking branches
+git remote show origin               # Shows detailed information about the 'origin' remote
 git remote add origin <repo-link>           # Adds a remote repository with the specified URL
-git branch -vv                              # Shows local branches and their remote tracking relationships
-git push origin master                      # Pushes local changes to the 'master' branch on the remote
-git ls-remote                               # Lists references (branches, tags) in a remote repository
-git fetch origin                            # Retrieves updates from the 'origin' remote without merging
+git branch -vv                # Shows local branches and their remote tracking relationships
+git push origin master               # Pushes local changes to the 'master' branch on the remote
+git ls-remote               # Lists references (branches, tags) in a remote repository
+git fetch origin               # Retrieves updates from the 'origin' remote without merging
 git branch --track [localTrackingBranch] origin/[remoteTrackingBranch]  
 # Creates a local branch tracking a remote branch
-git clone <url>                             # Clones a remote repository to the local machine
-git branch --delete --remotes [remoteTrackingBranch] # Deletes a remote tracking branch locally
-git push origin --delete [remoteBranch]     # Deletes a branch on the remote repository
+git clone <url>               # Clones a remote repository to the local machine
+git branch --delete --remotes [remoteTrackingBranch] 
+# Deletes a remote tracking branch locally
+git push origin --delete [remoteBranch]     
+# Deletes a branch on the remote repository
 ```
 
 ---
 
 > <h4 style="color:#942917; padding:5px">15. Sync Forked Repository</h4>
 ```sh
-git remote -v                                        # Verifies the URLs of configured remote repositories
-git remote add upstream <original-repo-url>          # Adds the original repository as an upstream remote
-git fetch upstream                                   # Retrieves updates from the upstream repository
-git checkout main                                    # Switches to the main branch in the local repository
-git merge upstream/main                              # Merges upstream main branch changes into the local main branch
-git push origin main                                 # Pushes updated local main branch to the forked repository
+git remote -v               # Verifies the URLs of configured remote repositories
+git remote add upstream <original-repo-url>
+# Adds the original repository as an upstream remote
+git fetch upstream               # Retrieves updates from the upstream repository
+git checkout main               # Switches to the main branch in the local repository
+git merge upstream/main               # Merges upstream main branch changes into the local main branch
+git push origin main                 # Pushes updated local main branch to the forked repository
 ```
