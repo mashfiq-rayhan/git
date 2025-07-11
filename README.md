@@ -5,8 +5,10 @@
 
 > <h4 style="color:#942917; padding:5px">01. Configuration</h4>
 ```sh
-git config --global user.email "mashfiq.rayhan.ovi@gmail.com"  # Sets the global email for commit authorship
-git config --global user.name "mashfiq-rayhan"                # Sets the global username for commit authorship
+git config --global user.email "mashfiq.rayhan.ovi@gmail.com"  
+# Sets the global email for commit authorship
+git config --global user.name "mashfiq-rayhan"                
+# Sets the global username for commit authorship
 ```
 
 ---
@@ -20,11 +22,16 @@ git init              # Initializes a new Git repository in the current director
 
 > <h4 style="color:#942917; padding:5px">03. Basic Commands</h4>
 ```sh
-git status                     # Shows the current state of the working directory and staging area
-git add .                      # Stages all changes (modified and untracked files) for the next commit
-git commit -m "commit message" # Records staged changes with a descriptive commit message
-git revert <commit-id>         # Creates a new commit to undo changes from the specified commit
-git log                        # Displays the commit history for the current branch
+git status               
+# Shows the current state of the working directory and staging area
+git add .               
+# Stages all changes (modified and untracked files) for the next commit
+git commit -m "commit message" 
+# Records staged changes with a descriptive commit message
+git revert <commit-id>         
+# Creates a new commit to undo changes from the specified commit
+git log                        
+# Displays the commit history for the current branch
 ```
 
 ---
