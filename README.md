@@ -75,7 +75,7 @@ git restore --staged <filename>      # Removes the specified file from the stagi
 git reset                            # Unstages all changes, keeping them in the working directory
 git reset --soft HEAD~1              # Undoes the last commit but keeps changes staged
 git reset HEAD~1                     # Undoes the last commit and unstages changes
-git reset --hard HEAD~1          # Undoes the last commit and discards changes in the working directory
+git reset --hard HEAD~1      # Undoes the last commit and discards changes in the working directory
 ```
 
 ---
